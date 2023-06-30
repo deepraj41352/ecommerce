@@ -5,7 +5,7 @@ import { AiOutlineHeart } from "react-icons/ai"
 import { GrHelp } from "react-icons/gr"
 import { BiLogOut } from "react-icons/bi"
 import { Link } from 'react-router-dom'
-import { useDispatch } from 'react-redux'
+import { useDispatch, useSelector } from 'react-redux'
 import { authActions } from '../../store/authSlice'
 
 export default function User() {
@@ -23,6 +23,8 @@ export default function User() {
   const logOut = (e) => {
     dispatch(authActions.logout())
   }
+
+  const userName = useSelector((state)=>state.auth.userName)
   return (
     <>
     <div className='profile'>
@@ -40,7 +42,7 @@ export default function User() {
             </div>
           </Link>
           <div className='text'>
-            <h4>Eden Smith</h4>
+            <h4>{userName}</h4>
             <label htmlFor=''>Los Angeles,CA</label>
           </div>
         </div>

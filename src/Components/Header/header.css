@@ -69,6 +69,7 @@ header {
   z-index: 77;
 }
 .cardItem {
+  overflow: overlay;
   position: fixed;
   top: 0;
   right: 0;
@@ -86,11 +87,12 @@ button .icon {
   font-size: 25px;
 }
 .checkOut {
-  position: absolute;
+  position: initial;
   bottom: 0;
   left: 0;
   margin: 30px;
   width: 88%;
+  margin-bottom: 65px;
 }
 .checkOut button {
   padding: 20px;

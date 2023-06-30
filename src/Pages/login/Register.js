@@ -1,7 +1,7 @@
 import React from 'react'
 import back from '../../Assest_data/image/my-account.jpg'
 import './login.css'
-import { Link } from 'react-router-dom'
+
 
 export default function Register() {
   return (
@@ -18,16 +18,16 @@ export default function Register() {
 
           <form>
             <span>Email address</span>
-            <input type='text' required />
+            <input type='text' required name='email'  />
             <span>Username * </span>
-            <input type='text' required />
+            <input type='text' required name='userName'  />
             <span>Password * </span>
-            <input type='text' required />
+            <input type='text' required name='password'  />
             <span>Confirm Password * </span>
-            <input type='text' required />
+            <input type='text' required name='pasword'  />
             <button className='button'>Register</button>
-            <Link to='login'>Login</Link>
           </form>
+          <a href='/'><button className='button2'>Log in</button></a>
         </div>
       </section>
     </>

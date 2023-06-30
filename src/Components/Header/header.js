@@ -8,6 +8,7 @@ import { Link } from 'react-router-dom';
 
 export default function Header() {
 
+
   window.addEventListener("scroll", function () {
     const header = this.document.querySelector(".header")
     header.classList.toggle("active", this.window.scrollY > 100)
@@ -25,7 +26,7 @@ export default function Header() {
            </Link>
             <div className='searchCon flex'>
                 <AiOutlineSearch className='searchIcon'/>
-                <input type='text' placeholder='Search ...'/>
+                <input type='text' placeholder='Search ...' />
             </div>
             <div className='account flexCenter'>
                 <Card />
